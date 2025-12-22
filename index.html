@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Ms digitale fotobok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a5c3a, #8b2e2e);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Enkle snøfnugg */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 1.5em;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .trips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .trip-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .trip-image {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+
+        .trip-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .trip-description {
+            padding: 0 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .trip-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .trip-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .trips {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snøfnugg -->
+    <div class="snowflake" style="left: 10%; animation-duration: 10s;">❄</div>
+    <div class="snowflake" style="left: 30%; animation-duration: 12s; animation-delay: 2s;">❄</div>
+    <div class="snowflake" style="left: 50%; animation-duration: 11s; animation-delay: 4s;">❄</div>
+    <div class="snowflake" style="left: 70%; animation-duration: 13s; animation-delay: 1s;">❄</div>
+    <div class="snowflake" style="left: 90%; animation-duration: 10s; animation-delay: 3s;">❄</div>
+
+    <div class="container">
+        <header>
+            <h1>🎄 4Ms digitale fotobok 🎄</h1>
+            <p class="subtitle">Våre reiseminner sammen</p>
+            <p>God jul! ❤️</p>
+        </header>
+
+        <div class="trips">
+            <div class="trip-card">
+                <div class="trip-image" style="background: linear-gradient(135deg, #0093E9, #80D0C7);"></div>
+                <h2 class="trip-title">🏝️ Seychellene</h2>
+                <p class="trip-description">Turkise strender og krystallklart vann</p>
+                <a href="seychellene.html" class="trip-link">Se bilder</a>
+            </div>
+
+            <div class="trip-card">
+                <div class="trip-image" style="background: linear-gradient(135deg, #FFA500, #FF6B6B);"></div>
+                <h2 class="trip-title">🏙️ Dubai</h2>
+                <p class="trip-description">Skyskrapere og ørkenens magi</p>
+                <a href="dubai.html" class="trip-link">Se bilder</a>
+            </div>
+
+            <div class="trip-card">
+                <div class="trip-image" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                <h2 class="trip-title">🌆 Singapore</h2>
+                <p class="trip-description">Moderne storby og eksotiske hager</p>
+                <a href="singapore.html" class="trip-link">Se bilder</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Hilsen Markus - Jul 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
